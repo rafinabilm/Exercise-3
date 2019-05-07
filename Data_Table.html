@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="1" >
+
+        <thead>
+            <tr>
+                <th colspan="11">
+                    <h1> DATA TABLE</h1>
+                </th>
+            </tr>
+                <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Rotation_period
+                        </th>
+                        <th>
+                            orbital_period
+                        </th>
+                        <th>
+                            diameter
+                        </th>
+                        <th>
+                            climate
+                        </th>
+                        <th>
+                            gravity
+                        </th>
+                        <th>
+                            terrain
+                        </th>
+                        <th>
+                            surface_water
+                        </th>
+                        <th>
+                            population
+                        </th>
+                        <th>
+                            residents
+                        </th>
+                        <th>
+                            films
+                        </th>
+                        
+                    </tr>
+        </thead>
+        <tbody id="kotak">
+
+        </tbody>
+       
+
+    </table>
+
+    <script src="contoh.js">
+    </script>
+    <script>
+
+        var data="";
+        var masuk = document.getElementById("kotak");
+        rujukan.map(I => {
+            data += "<tr><td>" + I.name + "</td><td>" + I.rotation_period + "</td><td>" + I.orbital_period + "</td><td>" + I.diameter + "</td><td>" + I.climate + "</td><td>" + I.gravity + "</td><td>" + I.terrain + "</td><td>" + I.surface_water + "</td><td>" + I.population + "</td><td><ul>" + I.residents.map(e => "<li>" + e + "</li>") + "</ul></td><td><ul>" + I.films.map(e => "<li>" + e + "</li>") + "</ul></td></tr>"  
+        } 
+        )
+
+
+
+        masuk.insertAdjacentHTML("beforeend", data)
+
+
+    </script>
+
+</body>
+</html>
